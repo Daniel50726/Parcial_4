@@ -19,12 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(timer,SIGNAL(timeout()),this, SLOT(obj_norm()));
     timer->start(1000);
 
-    //Llamamos al objeto especial (Caida libre)
-
-    QTimer * time = new QTimer();
-    connect(time,SIGNAL(timeout()),this, SLOT(obj_esp()));
-    time->start(1000);
-
     //Llamamos a los obstaculos
     QTimer * tim = new QTimer();
     connect(tim,SIGNAL(timeout()),this, SLOT(colision()));
@@ -69,3 +63,14 @@ void MainWindow::obj_esp()
     scene->addItem(especial);
 }
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    //Llamamos al objeto especial (Caida libre)
+
+    obj_esp();
+
+//    QTimer * time = new QTimer();
+//    connect(time,SIGNAL(timeout()),this, SLOT(obj_esp()));
+//    time->start(1000);
+}

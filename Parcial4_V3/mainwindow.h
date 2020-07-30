@@ -23,6 +23,9 @@ public slots:
     void obj_norm();
     void obj_esp();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     short ayuda=0;
     int tipo,posx,posy;
