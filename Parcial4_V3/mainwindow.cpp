@@ -9,9 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     scene=new QGraphicsScene;
-        ui->graphicsView->setScene(scene);
-        scene->setSceneRect(0,0,1121,750);
-        scene->addRect(scene->sceneRect());
+    ui->graphicsView->setScene(scene);
+    scene->setSceneRect(0,0,1121,750);
+    scene->addRect(scene->sceneRect());
 
     //Llamamos al objeto normal (Mov parabolico)
 
@@ -25,10 +25,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(time,SIGNAL(timeout()),this, SLOT(obj_esp()));
     time->start(1000);
 
-
+    //Llamamos a los obstaculos
     QTimer * tim = new QTimer();
     connect(tim,SIGNAL(timeout()),this, SLOT(colision()));
-    tim->start(1000);
+    tim->start(5000);
 
 }
 
@@ -39,11 +39,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::colision()
 {
+    if(ayuda==1){
+        scene->removeItem(rebote);
+        delete rebote;
+    }
+
     posx= 49+rand()% (50-900);
     posy= 399+rand()% (400-500);
     rebote = new Obstaculos();
     rebote->setPos(posx,posy);
     scene->addItem(rebote);
+    ayuda=1;
 }
 
 void MainWindow::obj_norm()

@@ -24,6 +24,7 @@ public slots:
     void obj_esp();
 
 private:
+    short ayuda=0;
     int tipo,posx,posy;
     Obstaculos *rebote;
     Tiro_para *normal;

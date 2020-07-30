@@ -1,4 +1,5 @@
 #include "caida_libre.h"
+#include "obstaculos.h"
 
 Caida_libre::Caida_libre(int x,QGraphicsItem * parent): QObject(), QGraphicsPixmapItem()
 {
@@ -23,6 +24,14 @@ void Caida_libre::actu_vel()
 
 void Caida_libre::move()
 {
+
+    QList<QGraphicsItem *> colliding_items = collidingItems();
+    for(int i = 0, n = colliding_items.size(); i < n; i++){
+        if(typeid(*(colliding_items[i])) == typeid (Obstaculos)){
+            Vel*=-1;
+        }
+    }
+
     if(con==0){
         pos_inicial=PosY;
         con=2;

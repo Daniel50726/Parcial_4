@@ -42,6 +42,12 @@ void Tiro_para::setPosx(double value)
 
 void Tiro_para::ActualizarPosicion()
 {
+    QList<QGraphicsItem *> colliding_items = collidingItems();
+    for(int i = 0, n = colliding_items.size(); i < n; i++){
+        if(typeid(*(colliding_items[i])) == typeid (Obstaculos)){
+            vel*=-1;
+        }
+    }
 
     if(con==0){
         pos_inicial=posy;

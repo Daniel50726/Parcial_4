@@ -599,7 +599,8 @@ release/caida_libre.o: ../Parcial4_V3/caida_libre.cpp ../Parcial4_V3/caida_libre
 		C:/Qt/5.12.2/mingw73_32/include/QtGui/qfontinfo.h \
 		C:/Qt/5.12.2/mingw73_32/include/QtGui/qfont.h \
 		C:/Qt/5.12.2/mingw73_32/include/QtGui/qfontmetrics.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtCore/QDebug
+		C:/Qt/5.12.2/mingw73_32/include/QtCore/QDebug \
+		../Parcial4_V3/obstaculos.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\caida_libre.o ..\Parcial4_V3\caida_libre.cpp
 
 release/main.o: ../Parcial4_V3/main.cpp ../Parcial4_V3/mainwindow.h \
@@ -857,29 +858,7 @@ release/mainwindow.o: ../Parcial4_V3/mainwindow.cpp ../Parcial4_V3/mainwindow.h 
 		C:/Qt/5.12.2/mingw73_32/include/QtCore/QDebug \
 		../Parcial4_V3/caida_libre.h \
 		../Parcial4_V3/obstaculos.h \
-		ui_mainwindow.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/QGraphicsView \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qgraphicsview.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qscrollarea.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/QMenuBar \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qmenu.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/QStatusBar \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.12.2/mingw73_32/include/QtWidgets/QWidget
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\Parcial4_V3\mainwindow.cpp
 
 release/obstaculos.o: ../Parcial4_V3/obstaculos.cpp ../Parcial4_V3/obstaculos.h \
