@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "tiro_para.h"
 #include "caida_libre.h"
+#include "obstaculos.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,11 +19,13 @@ public:
     ~MainWindow();
 
 public slots:
-
+    void colision();
     void obj_norm();
     void obj_esp();
 
 private:
+    int tipo,posx,posy;
+    Obstaculos *rebote;
     Tiro_para *normal;
     QGraphicsScene *scene;
     Caida_libre *especial;

@@ -19,11 +19,13 @@ SOURCES += \
     caida_libre.cpp \
     main.cpp \
     mainwindow.cpp \
+    obstaculos.cpp \
     tiro_para.cpp
 
 HEADERS += \
     caida_libre.h \
     mainwindow.h \
+    obstaculos.h \
     tiro_para.h
 
 FORMS += \
