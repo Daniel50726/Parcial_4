@@ -45,7 +45,7 @@ void MainWindow::colision()
     }
 
     posx= 49+rand()% (50-900);
-    posy= 399+rand()% (400-500);
+    posy= 299+rand()% (300-500);
     rebote = new Obstaculos();
     rebote->setPos(posx,posy);
     scene->addItem(rebote);

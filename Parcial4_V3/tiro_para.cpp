@@ -1,5 +1,6 @@
 #include "tiro_para.h"
 #include "mainwindow.h"
+#include <QGraphicsScene>
 
 extern MainWindow * game;
 
@@ -44,9 +45,13 @@ void Tiro_para::ActualizarPosicion()
 {
     QList<QGraphicsItem *> colliding_items = collidingItems();
     for(int i = 0, n = colliding_items.size(); i < n; i++){
-        if(typeid(*(colliding_items[i])) == typeid (Obstaculos)){
+        if(typeid(*(colliding_items[i])) == typeid (Obstaculos) || posx<=0 || posx>=1000 || posy<=0){
             vel*=-1;
         }
+    }
+    if(posy>=600){
+        scene()->removeItem(this);
+        delete this;
     }
 
     if(con==0){
